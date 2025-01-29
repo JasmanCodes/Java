@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class gradecalculator{
     public static void main(String[] args) {
-        try (Scanner sc = new Scanner(System.in)) {
+        Scanner sc = new Scanner(System.in);
             System.out.print("Enter marks of your Subject 1: ");
             float m1 = sc.nextFloat();
             System.out.println("Marks of your Subject 1: "+ m1);
@@ -32,6 +32,6 @@ public class gradecalculator{
                 grade = 'F';
             }
             System.out.println("Your grade is: "+ grade);
-        }
+        
     }
 }
