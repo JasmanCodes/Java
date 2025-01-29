@@ -1,21 +1,37 @@
-public class studentgrade {
-    
-    public static String calculateGrade(double marks1, double marks2, double marks3) {
-        double average = (marks1 + marks2 + marks3) / 3;
-        
-        if (average >= 90) {
-            return "Grade A";
-        } else if (average >= 75) {
-            return "Grade B";
-        } else if (average >= 50) {
-            return "Grade C";
-        } else {
-            return "Grade F";
-        }
-    }
-    
+import java.util.Scanner;
+
+public class gradecalculator{
     public static void main(String[] args) {
-        double marks1 = 85, marks2 = 90, marks3 = 80;
-        System.out.println("Final Grade: " + calculateGrade(marks1, marks2, marks3));
-    }
+        try (Scanner sc = new Scanner(System.in)) {
+            System.out.print("Enter marks of your Subject 1: ");
+            float m1 = sc.nextFloat();
+            System.out.println("Marks of your Subject 1: "+ m1);
+            System.out.print("Enter marks of your Subject 2: ");
+            float m2 = sc.nextFloat();
+            System.out.println("Marks of your Subject 2: "+ m2);
+            System.out.print("Enter marks of your Subject 3: ");
+            float m3 = sc.nextFloat();
+            System.out.println("Marks of your Subject 3: "+ m3);
+
+            float Avg;
+
+            Avg = (m1 + m2 + m3) / 3;
+
+            System.out.println("Your Avg is: "+ Avg);
+            char grade;
+            if(Avg >= 90){
+                    grade = 'A';
+                }
+                else if(Avg >= 75){
+                    grade = 'B';
+            }
+            else if(Avg >= 50){
+                grade = 'C';
+            }
+            else{
+                grade = 'F';
+            }
+            System.out.println("Your grade is: "+ grade);
+        }
+    }
 }
